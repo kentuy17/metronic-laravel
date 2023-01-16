@@ -7,7 +7,7 @@
     <!--begin::Notice-->
     <div class="alert alert-custom alert-white alert-shadow fade show gutter-b" role="alert">
         <div class="alert-icon">
-            <?php echo Metronic::getSVG("media/svg/icons/Tools/Compass.svg",
+            <?php echo Metronic::getSVG("media/svg/icons/Tools/Satan.svg",
                 "svg-icon-primary svg-icon-xl"); ?>
         </div>
         <div class="alert-text">
@@ -148,7 +148,8 @@
                             Use SVG icons as image.
                         </p>
                         <div class="example-preview">
-                            <img src="media/svg/icons/Clothes/Cap.svg" class="mr-5" alt=""/>
+                            {{-- <img src="{{Metronic::getSvg("media/svg/icons/Tools/Satan.svg"), "mr-5"}}" class="mr-5" alt=""/> --}}
+                            {{Metronic::getSvg("media/svg/icons/Tools/Satan.svg"), "mr-5"}}
                             <img src="media/svg/icons/Communication/Chat-error.svg" class="mr-5" alt=""/>
                             <img src="media/svg/icons/Design/Bucket.svg" class="mr-5" alt=""/>
                             <img src="media/svg/icons/Design/Substract.svg" class="mr-5" alt=""/>

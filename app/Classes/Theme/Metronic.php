@@ -116,6 +116,9 @@ class Metronic
      */
     public static function getSVG($filepath, $class = '')
     {
+        if(!is_string($filepath)) return '1';
+        if(!file_exists($filepath)) return '2';
+
         if (!is_string($filepath) || !file_exists($filepath)) {
             return '';
         }

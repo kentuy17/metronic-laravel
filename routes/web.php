@@ -14,19 +14,22 @@ use App\Http\Controllers\PagesController;
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/', [PagesController::class, 'index']);
+
+// Custom
+Route::get('/layout/themes/header-dark', [PagesController::class, 'datatables']);
 
 
 // Demo routes
 Route::get('/datatables', [PagesController::class, 'datatables'])->name('datatables');
-Route::get('/ktdatatables', 'PagesController@ktDatatables');
-Route::get('/select2', 'PagesController@select2');
-Route::get('/icons/custom-icons', 'PagesController@customIcons');
-Route::get('/icons/flaticon', 'PagesController@flaticon');
-Route::get('/icons/fontawesome', 'PagesController@fontawesome');
-Route::get('/icons/lineawesome', 'PagesController@lineawesome');
-Route::get('/icons/socicons', 'PagesController@socicons');
-Route::get('/icons/svg', 'PagesController@svg');
+Route::get('/ktdatatables', [PagesController::class, 'ktDatatables']);
+Route::get('/select2', [PagesController::class, 'select2']);
+Route::get('/icons/custom-icons', [PagesController::class, 'customIcons']);
+Route::get('/icons/flaticon', [PagesController::class, 'flaticon']);
+Route::get('/icons/fontawesome', [PagesController::class, 'fontawesome']);
+Route::get('/icons/lineawesome', [PagesController::class, 'lineawesome']);
+Route::get('/icons/socicons', [PagesController::class, 'socicons']);
+Route::get('/icons/svg', [PagesController::class, 'svg']);
 
 // Quick search dummy route to display html elements in search dropdown (header search)
-Route::get('/quick-search', 'PagesController@quickSearch')->name('quick-search');
+Route::get('/quick-search', [PagesController::class, 'quickSearch'])->name('quick-search');
