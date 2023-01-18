@@ -10,12 +10,199 @@ return [
             'icon' => 'media/svg/icons/Design/Layers.svg', // or can be 'flaticon-home' or any flaticon-*
             'page' => '/',
             'new-tab' => false,
+            'show' => true,
         ],
 
         // Custom
         [
             'section' => 'Custom',
+            'show' => true,
         ],
+        [
+            'title' => 'Active Transactions',
+            'icon' => 'media/svg/icons/Layout/Layout-left-panel-2.svg',
+            'root' => true,
+            'show' => true,
+            'page' => 'transactions',
+        ],
+        [
+            'title' => 'Borrowers',
+            'icon' => 'media/svg/icons/General/User.svg',
+            'bullet' => 'dot',
+            'root' => true,
+            'show' => true,
+            'submenu' => [
+                [
+                    'title' => 'View Borrowers',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+                [
+                    'title' => 'Add Borrowers',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+                [
+                    'title' => 'View Borrower Groups',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+                [
+                    'title' => 'Add Borrowers Groups',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+            ]
+        ],
+        [
+            'title' => 'Loans',
+            'icon' => 'media/svg/icons/Shopping/Calculator.svg',
+            'bullet' => 'dot',
+            'root' => true,
+            'show' => true,
+            'submenu' => [
+                [
+                    'title' => 'View All Loans',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+                [
+                    'title' => 'Past Maturity Date',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+                [
+                    'title' => '1 Month Late Loans',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+                [
+                    'title' => '3 Months Late Loans',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+            ]
+        ],
+        [
+            'title' => 'Repayments',
+            'icon' => 'media/svg/icons/Shopping/Dollar.svg',
+            'bullet' => 'dot',
+            'root' => true,
+            'show' => true,
+            'submenu' => [
+                [
+                    'title' => 'View Repayments',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+                [
+                    'title' => 'Add Bulk Repayments',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+            ]
+        ],
+        [
+            'title' => 'Collateral Register',
+            'icon' => 'media/svg/icons/Home/Key.svg',
+            'bullet' => 'dot',
+            'root' => true,
+            'show' => true,
+        ],
+        [
+            'title' => 'Collection Sheets',
+            'icon' => 'media/svg/icons/Files/File-done.svg',
+            'bullet' => 'dot',
+            'root' => true,
+            'show' => true,
+            'submenu' => [
+                [
+                    'title' => 'Daily Collection Sheet',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+                [
+                    'title' => 'Past Maturity Date Loans',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+                [
+                    'title' => 'Send SMS',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+            ]
+        ],
+        [
+            'title' => 'Savings',
+            'icon' => 'media/svg/icons/Shopping/Safe.svg',
+            'bullet' => 'dot',
+            'root' => true,
+            'show' => true,
+            'submenu' => [
+                [
+                    'title' => 'View Savings Accounts',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+                [
+                    'title' => 'View Savings Transactions',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+            ]
+        ],
+        [
+            'title' => 'Payroll',
+            'icon' => 'media/svg/icons/Communication/Clipboard-list.svg',
+            'bullet' => 'dot',
+            'root' => true,
+            'show' => true,
+            'submenu' => [
+                [
+                    'title' => 'View Payroll',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+                [
+                    'title' => 'Add Payroll',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+            ]
+        ],
+        [
+            'title' => 'Expenses',
+            'icon' => 'media/svg/icons/Shopping/Price1.svg',
+            'bullet' => 'dot',
+            'root' => true,
+            'show' => true,
+            'submenu' => [
+                [
+                    'title' => 'View Expenses',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+            ]
+        ],
+        [
+            'title' => 'Reports',
+            'icon' => 'media/svg/icons/Shopping/Chart-line1.svg',
+            'bullet' => 'dot',
+            'root' => true,
+            'show' => true,
+            'submenu' => [
+                [
+                    'title' => 'View Expenses',
+                    'bullet' => 'dot',
+                    'show' => true,
+                ],
+            ]
+        ],
+
+
+
+        // -------------
         [
             'title' => 'Applications',
             'icon' => 'media/svg/icons/Layout/Layout-4-blocks.svg',
@@ -387,6 +574,7 @@ return [
         // Layout
         [
             'section' => 'Layout',
+            'show' => true,
         ],
         [
             'title' => 'Themes',
@@ -397,13 +585,16 @@ return [
             'submenu' => [
                 [
                     'title' => 'Light Aside',
-                    'page' => 'layout/themes/aside-light'
+                    'page' => 'layout/themes/aside-light',
+                    'show' => true,
                 ],
                 [
                     'title' => 'Dark Header',
-                    'page' => 'layout/themes/header-dark'
+                    'page' => 'layout/themes/header-dark',
+                    'show' => true,
                 ]
-            ]
+            ],
+            'show' => true,
         ],
         [
             'title' => 'Subheaders',

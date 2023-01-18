@@ -23,7 +23,8 @@ class Menu
         if (isset($item['separator'])) {
             echo '<li class="menu-separator"><span></span></li>';
         } elseif (isset($item['section'])) {
-            echo '<li class="menu-section ' . ($rec === 0 ? 'menu-section--first' : '') . '">
+            $show = (isset($item['show']) && $item['show'] === true) ? 'show ' : '';
+            echo '<li class="menu-section ' . $show . ($rec === 0 ? 'menu-section--first' : '') . '">
                 <h4 class="menu-text">' . $item['section'] . '</h4>
                 <i class="menu-icon flaticon-more-v2"></i>
             </li>';
@@ -67,6 +68,10 @@ class Menu
                 $item_class .= ' menu-item-open menu-item-here'; // m-menu__item--active
             } elseif (self::isActiveVerMenuItem($item, request()->path())) {
                 $item_class .= ' menu-item-active';
+            }
+
+            if (isset($item['show']) && $item['show'] === true) {
+                $item_class .= ' show';
             }
 
             echo '<li class="menu-item ' . $item_class . '" aria-haspopup="true" ' . $item_attr . '>';
@@ -433,7 +438,7 @@ class Menu
     // Check for active Vertical Menu item
     public static function isActiveVerMenuItem($item, $page, $rec = 0)
     {
-        if (@$item['redirect'] === true) {
+        if ($item['redirect'] ?? false === true) {
             return false;
         }
 
@@ -457,7 +462,7 @@ class Menu
     // Check for active Horizontal Menu item
     public static function isActiveHorMenuItem($item, $page, $rec = 0)
     {
-        if (@$item['redirect'] === true) {
+        if ( $item['redirect'] ?? false === true ) {
             return false;
         }
 
